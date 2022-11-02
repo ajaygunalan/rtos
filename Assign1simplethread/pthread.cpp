@@ -27,10 +27,8 @@ pthread_t threads[NUM_THREADS];
 threadParams_t threadParams[NUM_THREADS];
 
 
-void *counterThread(void *threadp)
-{
-
-   syslog(LOG_CRIT,"[COURSE:1][ASSIGNMENT:1]Hello World from Thread!");
+void *counterThread(void *threadp){
+    syslog(LOG_CRIT,"[COURSE:1][ASSIGNMENT:1]Hello World from Thread!");
     int sum=0, i;
     threadParams_t *threadParams = (threadParams_t *)threadp;
 
